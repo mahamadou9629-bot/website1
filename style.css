@@ -45,6 +45,9 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
+.nav-link li{
+  list-style: none;
+}
 /* menulogo */
 .menu-toggle{
   display: none;
@@ -242,13 +245,13 @@ body {
   .nav-link{
     display: none;
     position: absolute;
-    top: 68px;
+    top: 65px;
     right: 0;
     background-color: #0A192F;
     flex-direction: column;
-    width: 50%;
+    width: 20%;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 12px;
   }
   .nav-link li{
     padding: 16px 0;

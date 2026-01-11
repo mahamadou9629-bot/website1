@@ -4,32 +4,24 @@ const buyButtons = document.querySelectorAll(".buy-btn");
 const form = document.getElementById("orderForm");
 
 // recherche
+
 const searchInput = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product");
+const products = document.querySelectorAll(".card");
 
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase();
 
-  products.forEach(product => {
-    const name = product.dataset.name.toLowerCase();
+  products.forEach(card => {
+    const name = card.querySelector("h3").innerText.toLowerCase();
 
-    if (value === "") {
-      product.classList.remove("highlight", "fade");
-    } 
-    else if (name.includes(value)) {
-      product.classList.add("highlight");
-      product.classList.remove("fade");
-    } 
-    else {
-      product.classList.remove("highlight");
-      product.classList.add("fade");
+    if (name.includes(value)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
     }
   });
 });
 
-
-
-let selectedProduct = "";
 
 // Ouvrir le formulaire
 buyButtons.forEach(button => {
