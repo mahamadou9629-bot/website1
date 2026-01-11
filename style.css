@@ -50,6 +50,7 @@ body {
   display: none;
   font-size: 26px;
   cursor: pointer;
+  color: #ffffff;
 }
 /* HERO */
 .hero {
@@ -237,17 +238,17 @@ body {
   color: #9ca3af;
 }
 /* respnsive */
-@media (max-width : 768px){
+@media (max-width: 768px){
   .nav-link{
     display: none;
     position: absolute;
-    top: 60px;
+    top: 68px;
     right: 0;
-    background: #111;
+    background-color: #0A192F;
     flex-direction: column;
-    width: 100%;
-    display: none;
+    width: 50%;
     text-align: center;
+    border-radius: 20px;
   }
   .nav-link li{
     padding: 16px 0;
