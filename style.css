@@ -31,7 +31,7 @@ body {
 
 .navbar a {
   color: white;
-  margin-left: 20px;
+  margin: 20px 0;
   text-decoration: none;
   transition: 0.5;
   padding: 10px;
@@ -40,7 +40,17 @@ body {
   border-bottom: 2px solid #22c55e;
   border-radius: 12px;
 }
-
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* menulogo */
+.menu-toggle{
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
 /* HERO */
 .hero {
   text-align: center;
@@ -225,4 +235,27 @@ body {
   margin-top: 30px;
   font-size: 13px;
   color: #9ca3af;
+}
+/* respnsive */
+@media (max-width : 768px){
+  .nav-link{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    text-align: center;
+  }
+  .nav-link li{
+    padding: 16px 0;
+  }
+  .nav-link.active{
+    display: flex;
+  }
+  .menu-toggle{
+    display: block;
+  }
 }

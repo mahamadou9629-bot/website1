@@ -61,3 +61,10 @@ form.addEventListener("submit", function (e) {
   modal.style.display = "none";
   form.reset();
 });
+// nav responsive
+const menuToggle = document.getElementById("menuToggle");
+const navLink = document.getElementById("navLink");
+
+menuToggle.addEventListener("click", ()=>{
+  navLink.classList.toggle("active");
+})
